@@ -1,159 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Networks in Letters</title>
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <title>Lev Connect</title>
+
+    <!-- google font -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- own css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 
-        <!-- CSS -->
+<!-- BODY -->
+<body>
+    <!-- overall -->
+    <div class="container-fluid" style="height: 100%">
+        <!-- TOP ROW -->
+        <div class="row" style="height: 8%">
 
-        <!-- google font -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        </div>
 
-        <!-- bootrap css -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-        <!-- vis.js css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css"  type="text/css" />
+        <!-- MIDDLE -->
+        <div class="row" style="height: 40%">
+            <div class="col-6" id="my_dataviz" style="background-color: #0d47a1">bar chart and brush</div>
+            <div class="col-6" style="background-color: #9a90a1">multiline chart</div>
+        </div>
 
-        <!-- nouislider css -->
-        <link rel="stylesheet" href="css/nouislider.css">
 
-        <!-- own css -->
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+        <!-- MIDDLE 2 -->
+        <div class="row" style="height: 45%">
+            <div class="col-6 offset-3" style="background-color: #5ea142">bar chart and brush</div>
+        </div>
 
-    <body>
+        <!-- BOTTOM -->
+        <div class="row" style="height: 7%">
 
-    <!-- overall | bootstrap grid initialization -->
-    <div class="container-fluid" id="overall">
-
-        <!-- HEADING -->
-        <div class="row" style="background-color: rgba(195,196,192,0.46)"><h1>Networks in Letters333</h1></div>
-
-        <!-- APP -->
-        <div class="row" id="row-main" style="background-color: rgba(255,255,255,0.80)">
-
-            <!-- left container | NodeInfo -->
-            <div class="col-md-3 sidebar collapsed" id="sidebar-left">
-                <div class="row" id="authorInfoImg" style="text-align: center"></div>
-                <div class ="row"><h3 id="authorInfoHeader"></h3></div>
-                <div class="row"><p id="authorInfoText"></p></div>
-            </div>
-
-            <!-- center container | ForceGraph -->
-            <div class="col-md-12" id="center">
-
-                <!-- filtering container -->
-                <div class="row" style="background-color: rgba(255,255,255,0.4)">
-
-                    <!-- sliders for manipulating algorithm based on letter amounts, length and sentiment -->
-                    <div class="col-md-1"><div class="arrow-left"></div></div> <!-- placeholder -->
-                    <div class="col-md-1"><div id="numberOfLetters-sliderDiv" class="VerticalSlider"></div><h5># of Letters</h5></div>
-                    <div class="col-md-1"><div id="lengthOfLetters-sliderDiv" class="VerticalSlider"></div><h5>length of Letters</h5></div>
-                    <div class="col-md-1"><div id="sentimentOfLetters-sliderDiv" class="VerticalSlider"></div><h5>sentiment of Letters</h5></div>
-                    <div class="col-md-1"></div> <!-- placeholder -->
-                    <div class="col-md-6">
-
-                        <!-- filtering time -->
-                        <div class="row">
-                            <h3>filtering</h3>
-                            <div id="pips-range" style="margin-top: 10px; margin-bottom: 35px"></div>
-                        </div>
-
-                        <!-- selecting data set to be visualized -->
-                        <div class="row">
-
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-2"><img src="img/YoungVienna.jpg" class="buttonIMG" onclick="selectExample(YoungViennaData, 1890, 1900)"></div>
-                                <div class="col-md-4"><h3> select a dataset </h3></div>
-                                <div class="col-md-2"><img src="img/Darwin.jpg" class="buttonIMG" onclick="selectExample(DarwinData, 1856, 1874)"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-1"><div class="arrow-right"></div></div>
-
-                </div>
-
-                <!-- force graph container -->
-                <div id="NetworkGraphDiv" style="width: 100%; height: 500px"></div>
-            </div>
-
-            <!-- right container | EdgeInfo -->
-            <div class="col-md-3 sidebar collapsed" id="sidebar-right" style="background-color: rgba(255,255,255,0.4); border-left: thin solid rgba(158,158,158,0.40);">
-
-                <!-- sender chart -->
-                <div id="sender" class="row authorInfoBar">
-                    <div class="col-md-3" id="senderPicture"></div>
-                    <div class="col-md-9" id="senderHeading" ></div>
-                </div>
-
-                <!-- recipient chart -->
-                <div id="recipient" class="row authorInfoBar">
-                    <div class="col-md-3" id="recipientPicture"></div>
-                    <div class="col-md-9" id="recipientHeading"></div>
-                </div>
-
-                <!-- sentiment chart -->
-                <div id="sentiment" class="row authorInfoBar">
-                    <div class="col-md-3" id="relationshipPic"></div>
-                    <div class="col-md-9" id="relationshipHeading">Relationship</div>
-                </div>
-
-                <!-- formula -->
-                <div class="row" style="font-size: 9px">$$ y = {sentiment + \sqrt{(*letterLength)^2-letters} \over nonsense - time since last letter}$$</div>
-            </div>
         </div>
     </div>
 
 
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/libs/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="js/libs/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.js"></script>
 
-    <!-- grid -->
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!-- SCRIPTS -->
 
-    <!-- slider -->
-    <script src="js/libs/nouislider.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-    <!-- adding d3.js and vis.js-->
-    <script src="js/libs/d3.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <!-- d3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 
-    <!-- mathJax to write equations-->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-
-    <!-- client side data -->
-    <script src="js/data/YoungViennaData.js"></script>
-    <script src="js/data/DarwinData.js"></script>
-
-    <!-- own js files -->
-    <script src="js/initial.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/slider.js"></script>
-
-    <script src="js/scatterbar.js"></script>
-    <script src="js/linegraph.js"></script>
-    <script src="js/networkGraph.js"></script>
-
+    <!-- own scripts -->
     <script src="js/main.js"></script>
-
-    <!-- grid functionality -->
-    <script src="js/grid.js"></script>
-
-
-
-
-    </body>
-
+    <script src="js/histogram.js"></script>
+</body>
 </html>
