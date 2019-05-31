@@ -1,6 +1,6 @@
 // set the dimensions and margins of the graph
 let bubbleChartDiv = $('#bubbleChartDiv'),
-    bubbleMargin = {top: 30, right: 50, bottom: 30, left: 50},
+    bubbleMargin = {top: 30, right: 50, bottom: 50, left: 50},
     bubbleWidth = bubbleChartDiv.width() - bubbleMargin.left - bubbleMargin.right,
     bubbleHeight = bubbleChartDiv.height() - bubbleMargin.top - bubbleMargin.bottom;
 
@@ -19,7 +19,7 @@ let bubbleHeading = bubbleSvg.append("text")
     .attr("x", bubbleWidth/2)
     .attr("y", -10)
     .style("text-anchor", "middle")
-    .text('Research Status');
+    .text('State of Research');
 
 
 let gridLine = bubbleSvg.append('line')
@@ -70,9 +70,9 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
         .attr("class", "lineLabels")
         .attr("transform",
             "translate(" + (bubbleWidth) + " ," +
-            (bubbleHeight + 13) + ")")
+            (bubbleHeight + 25) + ")")
         .style("text-anchor", "end")
-        .text("size of holding in ");
+        .text("holding size in linear feet ");
 
     // Add dots
     bubbleSvg.append('g')
@@ -80,7 +80,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
         .data(data)
         .enter()
         .append("circle")
-        .attr("cx", function (d) { console.log(d); return x(d.gdpPercap); } )
+        .attr("cx", function (d) { return x(d.gdpPercap); } )
         .attr("cy", function (d) { return y(d.lifeExp); } )
         .attr("r", function (d) { return z(d.pop); } )
         .attr("class", "circle")

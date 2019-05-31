@@ -20,7 +20,7 @@ let barHeading = barSvg.append("text")
     .attr("x", barWidth/2)
     .attr("y", -10)
     .style("text-anchor", "middle")
-    .text('Top 10 Holdings mentioned in the HLB');
+    .text('Top 10 Holdings Mentioned in the HLB');
 
 // Parse the Data
 d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv").then( function(data) {

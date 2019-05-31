@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebeb9706-4d4e-4c7b-aa04-f8edbe998c06" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/fontstyles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/bars.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/bubble.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/lines.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/histogram.js" afterPath="$PROJECT_DIR$/static/js/histogram.js" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/bars.js" afterPath="$PROJECT_DIR$/static/js/bars.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/bubble.js" afterPath="$PROJECT_DIR$/static/js/bubble.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/lines.js" afterPath="$PROJECT_DIR$/static/js/lines.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bars.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bars.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/bars.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+            <state relative-caret-position="294">
+              <caret line="14" column="67" lean-forward="true" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -71,18 +64,18 @@
       <file leaf-file-name="lines.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/lines.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="37" selection-end-column="18" />
+            <state relative-caret-position="1533">
+              <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bubble.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bubble.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/bubble.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+            <state relative-caret-position="588">
+              <caret line="82" column="35" lean-forward="false" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -148,9 +141,9 @@
         <option value="$PROJECT_DIR$/static/css/styles.css" />
         <option value="$PROJECT_DIR$/static/css/fontstyles.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/static/js/bars.js" />
-        <option value="$PROJECT_DIR$/static/js/lines.js" />
         <option value="$PROJECT_DIR$/static/js/bubble.js" />
+        <option value="$PROJECT_DIR$/static/js/lines.js" />
+        <option value="$PROJECT_DIR$/static/js/bars.js" />
       </list>
     </option>
   </component>
@@ -271,12 +264,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558620438677</updated>
       <workItem from="1558620439952" duration="1522000" />
-      <workItem from="1559192709560" duration="23322000" />
+      <workItem from="1559192709560" duration="25852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24844000" />
+    <option name="totallyTimeSpent" value="27374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -472,26 +465,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/bars.js">
+    <entry file="file://$PROJECT_DIR$/static/js/bubble.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        <state relative-caret-position="588">
+          <caret line="82" column="35" lean-forward="false" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/lines.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="37" selection-end-column="18" />
+        <state relative-caret-position="1533">
+          <caret line="73" column="23" lean-forward="true" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/bubble.js">
+    <entry file="file://$PROJECT_DIR$/static/js/bars.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        <state relative-caret-position="294">
+          <caret line="14" column="67" lean-forward="true" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
           <folding />
         </state>
       </provider>

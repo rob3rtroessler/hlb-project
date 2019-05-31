@@ -82,6 +82,9 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
                 (d.values)
 
         })
+        .on("mouseover", function(d) {
+            $("#infoField").html(`Name: ${d.key}`)
+        })
         .on("click", function(d){
             // check if already clicked
             if(d3.select(this).classed('selectedLine')=== false){
