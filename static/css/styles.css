@@ -1,0 +1,67 @@
+html,
+body {
+    height: 100%;
+}
+
+
+/* BAR CHART*/
+.bar {
+    fill: #5ab4ac
+}
+
+.bar:hover {
+    fill: #41827a
+}
+
+.selectedBar {
+    fill: #d8b365;
+    opacity: 1
+}
+
+.selectedBar:hover {
+    fill: #b49259;
+    opacity: 1
+}
+
+
+/* LINE CHART*/
+.line {
+    stroke: #5ab4ac;
+    stroke-width: 2px;
+}
+
+.line:hover {
+    stroke: #41827a;
+    stroke-width: 3px;
+}
+
+.selectedLine {
+    stroke: #d8b365;
+    stroke-width: 2px;
+}
+
+.selectedLine:hover {
+    stroke: #b49259;
+    stroke-width: 3px;
+}
+
+
+
+.circle {
+    fill: #5ab4ac;
+    stroke: black;
+}
+
+.circle:hover {
+    fill: #41827a;
+}
+
+.selectedCircle {
+    fill: #d8b365;
+    opacity: 1
+}
+
+.selectedCircle:hover {
+    fill: #b49259;
+    opacity: 1
+}

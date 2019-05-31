@@ -4,7 +4,7 @@
 <!-- HEAD -->
 <head>
     <meta charset="UTF-8">
-    <title>Lev Connect</title>
+    <title>HLB</title>
 
     <!-- google font -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- own css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontstyles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 
@@ -21,28 +22,31 @@
 <body>
     <!-- overall -->
     <div class="container-fluid" style="height: 100%">
+
         <!-- TOP ROW -->
-        <div class="row" style="height: 8%">
-
+        <div class="row" style="height: 14%">
+            <div class="col-12"><h1>Harvard Library Bulletin - A Visual Framework</h1></div>
         </div>
 
 
-        <!-- MIDDLE -->
+        <!-- VISROW 1 -->
         <div class="row" style="height: 40%">
-            <div class="col-6" id="my_dataviz" style="background-color: #0d47a1">bar chart and brush</div>
-            <div class="col-6" style="background-color: #9a90a1">multiline chart</div>
+            <div class="col-6"><div class="row" id="barDiv" style="height: 100%"></div></div>
+            <div class="col-6"><div class="row" id="lineChartDiv" style="height: 100%"></div></div>
         </div>
 
 
-        <!-- MIDDLE 2 -->
+        <!-- VISROW 2 -->
         <div class="row" style="height: 45%">
-            <div class="col-6 offset-3" style="background-color: #5ea142">bar chart and brush</div>
+            <div class="col-3" style="border: 1px; border-style: dotted">
+                <div class="row" style="height: 20%"><h3>Accessible Information</h3></div>
+                <div class="row" style="height: 20%"><span style="text-align: center; width: 100%" id="infoField"></span></div>
+            </div>
+            <div class="col-6"><div class="row" id="bubbleChartDiv" style="height: 100%"></div></div>
         </div>
 
-        <!-- BOTTOM -->
-        <div class="row" style="height: 7%">
-
-        </div>
+        <!-- TOP ROW -->
+        <div class="row" style="height: 1%"></div>
     </div>
 
 
@@ -58,6 +62,8 @@
 
     <!-- own scripts -->
     <script src="js/main.js"></script>
-    <script src="js/histogram.js"></script>
+    <script src="js/bars.js"></script>
+    <script src="js/lines.js"></script>
+    <script src="js/bubble.js"></script>
 </body>
 </html>

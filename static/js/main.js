@@ -1,4 +1,7 @@
 
+// GLOBAL VARIABLES
+let selectedHoldings = [];
+
 
 
 
