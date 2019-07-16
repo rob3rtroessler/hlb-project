@@ -15,39 +15,46 @@
     <!-- own css -->
     <link rel="stylesheet" href="css/fontstyles.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/jquery.pagepiling.css">
 </head>
 
 
 <!-- BODY -->
 <body>
-    <!-- overall -->
-    <div class="container-fluid" style="height: 100%">
-
-        <!-- TOP ROW -->
-        <div class="row" style="height: 14%">
-            <div class="col-12"><h1>Harvard Library Bulletin - A Visual Framework</h1></div>
-        </div>
 
 
-        <!-- VISROW 1 -->
-        <div class="row" style="height: 40%">
-            <div class="col-6"><div class="row" id="barDiv" style="height: 100%"></div></div>
-            <div class="col-6"><div class="row" id="lineChartDiv" style="height: 100%"></div></div>
-        </div>
+<!-- overall -->
+<div class="container-fluid" style="height: 100%">
 
-
-        <!-- VISROW 2 -->
-        <div class="row" style="height: 45%">
-            <div class="col-3" style="border: 1px; border-style: dotted">
-                <div class="row" style="height: 20%"><h3>Accessible Information</h3></div>
-                <div class="row" style="height: 20%"><span style="text-align: center; width: 100%" id="infoField"></span></div>
-            </div>
-            <div class="col-6"><div class="row" id="bubbleChartDiv" style="height: 100%"></div></div>
-        </div>
-
-        <!-- TOP ROW -->
-        <div class="row" style="height: 1%"></div>
+    <!-- TOP ROW -->
+    <div class="row" style="height: 14%">
+        <div class="col-12"><h1>Harvard Library Bulletin - A Visual Framework</h1></div>
     </div>
+
+
+    <!-- VISROW 1 -->
+    <div class="row" style="height: 20%">
+        <div class="container-fluid"><div class="row" id="barDiv" style="height: 100%"></div></div>
+    </div>
+
+
+    <!-- VISROW 2 -->
+    <div class="row" style="height: 65%">
+        <div class="col-2">
+            <div class="row" id="lineChartDiv" style="height: 100%"></div>
+        </div>
+        <div class="col-8"><div class="row" id="bubbleChartDiv" style="height: 100%"></div></div>
+        <div class="col-2" style="border: 1px; border-style: dotted">
+            <div class="row" style="height: 20%"><h3>Accessible Information</h3></div>
+            <div class="row" style="height: 20%"><span style="text-align: center; width: 100%" id="infoField"></span></div>
+        </div>
+    </div>
+
+    <!-- TOP ROW -->
+    <div class="row" style="height: 1%"></div>
+</div>
+
+
 
 
 
@@ -60,10 +67,14 @@
     <!-- d3 -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
+    <!-- fullpage -->
+    <script src="js/libs/jquery.pagepiling.js"></script>
+
     <!-- own scripts -->
-    <script src="js/main.js"></script>
     <script src="js/bars.js"></script>
     <script src="js/lines.js"></script>
     <script src="js/bubble.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

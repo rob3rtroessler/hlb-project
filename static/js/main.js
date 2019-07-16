@@ -2,13 +2,3 @@
 // GLOBAL VARIABLES
 let selectedHoldings = [];
 
-
-
-
-
-
-
-
-
-
-

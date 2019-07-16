@@ -6,62 +6,62 @@ body {
 
 /* BAR CHART*/
 .bar {
-    fill: #5ab4ac
+    fill: #0571b0
 }
 
 .bar:hover {
-    fill: #41827a
+    fill: #92c5de
 }
 
 .selectedBar {
-    fill: #d8b365;
+    fill: #ca0020;
     opacity: 1
 }
 
 .selectedBar:hover {
-    fill: #b49259;
+    fill: #f4a582;
     opacity: 1
 }
 
 
 /* LINE CHART*/
 .line {
-    stroke: #5ab4ac;
+    stroke: #0571b0;
     stroke-width: 2px;
 }
 
 .line:hover {
-    stroke: #41827a;
+    stroke: #92c5de;
     stroke-width: 3px;
 }
 
 .selectedLine {
-    stroke: #d8b365;
+    stroke: #ca0020;
     stroke-width: 2px;
 }
 
 .selectedLine:hover {
-    stroke: #b49259;
+    stroke: #f4a582;
     stroke-width: 3px;
 }
 
 
 
 .circle {
-    fill: #5ab4ac;
+    fill: #0571b0;
     stroke: black;
 }
 
 .circle:hover {
-    fill: #41827a;
+    fill: #92c5de;
 }
 
 .selectedCircle {
-    fill: #d8b365;
+    fill: #ca0020;
     opacity: 1
 }
 
 .selectedCircle:hover {
-    fill: #b49259;
+    fill: #f4a582;
     opacity: 1
 }

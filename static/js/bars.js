@@ -1,6 +1,6 @@
 // set the dimensions and margins of the graph
 let barDiv = $('#barDiv'),
-    barMargin = {top: 30, right: 30, bottom: 70, left: 70},
+    barMargin = {top: 30, right: 50, bottom: 70, left: 50},
     barWidth = barDiv.width() - barMargin.left - barMargin.right,
     barHeight = barDiv.height() - barMargin.top - barMargin.bottom;
 
@@ -20,20 +20,20 @@ let barHeading = barSvg.append("text")
     .attr("x", barWidth/2)
     .attr("y", -10)
     .style("text-anchor", "middle")
-    .text('Top 10 Holdings Mentioned in the HLB');
+    .text('Holdings Mentioned in the HLB');
 
 // Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv").then( function(data) {
+d3.csv("data/collections.csv").then( function(data) {
 
     // sort data
     data.sort(function(b, a) {
-        return a.Value - b.Value;
+        return a.HLB_Publications - b.HLB_Publications;
     });
 
     // X axis
     let x = d3.scaleBand()
         .range([ 0, barWidth ])
-        .domain(data.map(function(d) { return d.Country; }))
+        .domain(data.map(function(d) { return d.Collection; }))
         .padding(0.2);
     barSvg.append("g")
         .attr("transform", "translate(0," + barHeight + ")")
@@ -45,10 +45,10 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
 
     // Add Y axis
     let y = d3.scaleLinear()
-        .domain([0, 13000])
+        .domain([0, 15])
         .range([ barHeight, 0]);
     barSvg.append("g")
-        .call(d3.axisLeft(y));
+        .call(d3.axisLeft(y).ticks(4));
 
     // Add labels
     let yLabel = barSvg.append("text")
@@ -63,12 +63,12 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
         .enter()
         .append("rect")
         .attr("class" , "bar")
-        .attr("x", function(d) { return x(d.Country); })
-        .attr("y", function(d) { return y(d.Value); })
+        .attr("x", function(d) { return x(d.Collection); })
+        .attr("y", function(d) { return y(d.HLB_Publications); })
         .attr("width", x.bandwidth())
-        .attr("height", function(d) { return barHeight - y(d.Value);})
+        .attr("height", function(d) { return barHeight - y(d.HLB_Publications);})
         .on("mouseover", function(d) {
-            $("#infoField").html(`Country: ${d.Country} </br> Value: ${d.Value}`)
+            $("#infoField").html(`Collection: ${d.Collection} </br> Total # of HLB_Publications: ${d.HLB_Publications}`)
         })
         .on("click", function(d){
             // check if already clicked
@@ -76,11 +76,11 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
                 d3.select(this).classed("selectedBar", true);
 
                 // then add selection to array
-                selectedHoldings.push(d.Country);
+                selectedHoldings.push(d.Collection);
             }
             else {
                 d3.select(this).classed("selectedBar", false);
-                selectedHoldings.push(d.Country);
+                selectedHoldings.push(d.Collection);
             }
         })
 });
