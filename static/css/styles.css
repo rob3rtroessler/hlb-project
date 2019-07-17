@@ -6,26 +6,18 @@ body {
 
 /* BAR CHART*/
 .bar {
-    fill: #0571b0
+    opacity: 1;
+    cursor: pointer;
 }
 
 .bar:hover {
-    fill: #92c5de
-}
-
-.selectedBar {
-    fill: #ca0020;
-    opacity: 1
-}
-
-.selectedBar:hover {
-    fill: #f4a582;
-    opacity: 1
+    border: thin solid black;
+    cursor: pointer;
 }
 
 
 /* LINE CHART*/
-.line {
+/*.line {
     stroke: #0571b0;
     stroke-width: 2px;
 }
@@ -43,10 +35,11 @@ body {
 .selectedLine:hover {
     stroke: #f4a582;
     stroke-width: 3px;
-}
+}*/
 
 
 
+/*
 .circle {
     fill: #0571b0;
     stroke: black;
@@ -64,4 +57,4 @@ body {
 .selectedCircle:hover {
     fill: #f4a582;
     opacity: 1
-}
+}*/

@@ -31,20 +31,18 @@ let xLabel = lineSvg.append("text")
     .text("# of HLB articles / RRRs");
 
 
-//Read the data
-//d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/5_OneCatSevNumOrdered.csv").then( function(data) {
+// Read the data
 d3.csv("data/publicationsOverTime.csv").then( function(data) {
+
     // group the data: I want to draw one line per group
     let sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
-        .key(function(d) { return d.collection;})
+        .key(function(d){return d.collection;})
         .entries(data);
 
-
+    // convert year into number TODO: scaleTime
     data.forEach(function (d) {
         d.year = +d.year;
     });
-
-    console.log(data);
 
     // Add y axis --> it is a date format
     let y = d3.scaleLinear()
@@ -65,19 +63,16 @@ d3.csv("data/publicationsOverTime.csv").then( function(data) {
         .attr("transform", "translate(0," + lineHeight + ")")
         .call(d3.axisBottom(x).ticks(3));
 
-    // color palette
-    let res = sumstat.map(function(d){ return d.key }); // list of group names
-    let color = d3.scaleOrdinal()
-        .domain(res)
-        .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999']);
 
     // Draw the line
     lineSvg.selectAll(".line")
         .data(sumstat)
         .enter()
         .append("path")
-        .attr("class", "line")
+        .attr("class", function(d){return "line " + d.key + "_line"})
         .attr("fill", "none")
+        .attr("stroke", colorForUnselected)
+        .attr("stroke-width", 0.2)
         .attr("d", function(d){
             return d3.line()
                 .x(function(d) { return x(+d.n); })
@@ -87,20 +82,14 @@ d3.csv("data/publicationsOverTime.csv").then( function(data) {
 
         })
         .on("mouseover", function(d) {
-            $("#infoField").html(`Name: ${d.key}`)
-        })
-        .on("click", function(d){
-            // check if already clicked
-            if(d3.select(this).classed('selectedLine')=== false){
-                d3.select(this).classed("selectedLine", true);
 
-                // then add selection to array
-                selectedHoldings.push(d.Country);
-            }
-            else {
-                d3.select(this).classed("selectedLine", false);
-                selectedHoldings.push(d.Country);
-            }
+            // show info
+            $("#infoField").html(`Name: ${d.key}`);
+            console.log(d);
+            // assign colors
+            ColorToClass(d.key);
         })
+        .on("mouseout", function(d) {RemoveColorFromClass(d.key)})
+        .on("click", function(d){ lockColor(d.collection) });
 
 });

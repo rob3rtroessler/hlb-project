@@ -62,25 +62,20 @@ d3.csv("data/collections.csv").then( function(data) {
         .data(data)
         .enter()
         .append("rect")
-        .attr("class" , "bar")
+        .attr("class" , function(d){return ("bar " + d.Collection + "_bar")})
         .attr("x", function(d) { return x(d.Collection); })
         .attr("y", function(d) { return y(d.HLB_Publications); })
         .attr("width", x.bandwidth())
         .attr("height", function(d) { return barHeight - y(d.HLB_Publications);})
+        .attr("fill", colorForUnselected)
         .on("mouseover", function(d) {
-            $("#infoField").html(`Collection: ${d.Collection} </br> Total # of HLB_Publications: ${d.HLB_Publications}`)
-        })
-        .on("click", function(d){
-            // check if already clicked
-            if(d3.select(this).classed('selectedBar')=== false){
-                d3.select(this).classed("selectedBar", true);
 
-                // then add selection to array
-                selectedHoldings.push(d.Collection);
-            }
-            else {
-                d3.select(this).classed("selectedBar", false);
-                selectedHoldings.push(d.Collection);
-            }
+            // fill info field
+            $("#infoField").html(`Collection: ${d.Collection} </br> Total # of HLB_Publications: ${d.HLB_Publications}`)
+
+            // color to class
+            ColorToClass(d.Collection);
         })
+        .on("mouseout", function(d) { RemoveColorFromClass(d.Collection) })
+        .on("click", function(d){ lockColor(d.Collection); })
 });

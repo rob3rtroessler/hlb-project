@@ -37,11 +37,13 @@ let gridLine = bubbleSvg.append('line')
 
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/4_ThreeNum.csv").then( function(data) {
+//d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/4_ThreeNum.csv").then( function(data) {
+d3.csv("data/collection_scatter.csv").then( function(data) {
 
+    console.log(data);
     // Add X axis
     let x = d3.scaleLinear()
-        .domain([0, d3.max(data.map(function(d){return +d.gdpPercap}))])
+        .domain([0, d3.max(data.map(function(d){return +d.size}))])
         .range([ 0, bubbleWidth ]);
     bubbleSvg.append("g")
         .attr("transform", "translate(0," + bubbleHeight + ")")
@@ -49,7 +51,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
 
     // Add Y axis
     let y = d3.scaleLinear()
-        .domain([35, 90])
+        .domain([0, 20])
         .range([ bubbleHeight, 0]);
     bubbleSvg.append("g")
         .call(d3.axisLeft(y));
@@ -80,25 +82,51 @@ d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_data
         .data(data)
         .enter()
         .append("circle")
-        .attr("cx", function (d) { return x(d.gdpPercap); } )
-        .attr("cy", function (d) { return y(d.lifeExp); } )
-        .attr("r", function (d) { return z(d.pop); } )
-        .attr("class", "circle")
+        .attr("cx", function (d) { return x(d.size); } )
+        .attr("cy", function (d) { return y(d.articles); } )
+        .attr("r", function (d) { return 5 })
+        .attr("class", function(d){return 'circle ' + d.collection + '_circle'})
+        .attr("fill", colorForUnselected)
         .on("mouseover", function(d) {
-            $("#infoField").html(`Country: ${d.country} </br> Population: ${d.pop} </br> GDP: ${d.gdpPercap} </br> lifeExp: ${d.lifeExp}`)
+
+            // fill info field
+            $("#infoField").html(`# of HLB articles: ${d.articles} </br> Population: ${d.pop} </br> GDP: ${d.size} </br> lifeExp: ${d.lifeExp}`)
+
+            // assign color
+            ColorToClass(d.collection);
+
+            // animation
+            enlargeSelectedCircle(d.collection)
+        })
+
+        .on("mouseout", function(d){
+
+            // remove color from class
+            RemoveColorFromClass(d.collection);
+
+            // reduce only if color isn't locked
+            if(!selectedClasses.includes(d.collection)){ reduceSelectedCircle(d.collection) }
         })
         .on("click", function(d){
-            // check if already clicked
-            if(d3.select(this).classed('selectedCircle')=== false){
-                d3.select(this).classed("selectedCircle", true);
-
-                // then add selection to array
-                selectedHoldings.push(d.Country);
-            }
-            else {
-                d3.select(this).classed("selectedCircle", false);
-                selectedHoldings.push(d.Country);
-            }
+            lockColor(d.collection);
         })
-
 });
+
+
+
+/* * * * * * * * * * * * * * * * * *
+*        HELPER FUNCTIONS          *
+* * * * * * * * * * * * * * * * *  */
+
+function enlargeSelectedCircle(className){
+    d3.select("."+className + "_circle")
+        .transition()
+        .attr("r", 30)
+        .duration(500);
+}
+function reduceSelectedCircle(className){
+    d3.select("."+className + "_circle")
+        .transition()
+        .attr("r", 5)
+        .duration(500);
+}
