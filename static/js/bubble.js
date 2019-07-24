@@ -40,7 +40,8 @@ let gridLine = bubbleSvg.append('line')
 //d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/4_ThreeNum.csv").then( function(data) {
 d3.csv("data/collection_scatter.csv").then( function(data) {
 
-    console.log(data);
+    // console.log(data);
+
     // Add X axis
     let x = d3.scaleLinear()
         .domain([0, d3.max(data.map(function(d){return +d.size}))])
@@ -66,7 +67,7 @@ d3.csv("data/collection_scatter.csv").then( function(data) {
         .attr("class", "lineLabels")
         .attr('transform', 'translate(13,0), rotate(-90)')
         .style("text-anchor", "end")
-        .text("# of HLB articles / RRRs");
+        .text("# of HLB articles");
 
     let xLabel = bubbleSvg.append("text")
         .attr("class", "lineLabels")
@@ -89,8 +90,9 @@ d3.csv("data/collection_scatter.csv").then( function(data) {
         .attr("fill", colorForUnselected)
         .on("mouseover", function(d) {
 
+            //console.log(d);
             // fill info field
-            $("#infoField").html(`# of HLB articles: ${d.articles} </br> Population: ${d.pop} </br> GDP: ${d.size} </br> lifeExp: ${d.lifeExp}`)
+            $("#infoField").html(`# of HLB articles: ${d.articles} </br> size in linear feet: ${d.size} </br> reading room request: ${d.rrr}`)
 
             // assign color
             ColorToClass(d.collection);
@@ -109,6 +111,16 @@ d3.csv("data/collection_scatter.csv").then( function(data) {
         })
         .on("click", function(d){
             lockColor(d.collection);
+            // draw fancy
+            fancy(LookUpCurrentCollection())
+        })
+        .on('dblclick', function(d){
+
+            // activate carousel
+            let i = 1; //index of the panel
+            $('.carousel').carousel(i);
+
+
         })
 });
 

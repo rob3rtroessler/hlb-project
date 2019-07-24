@@ -71,11 +71,14 @@ d3.csv("data/collections.csv").then( function(data) {
         .on("mouseover", function(d) {
 
             // fill info field
-            $("#infoField").html(`Collection: ${d.Collection} </br> Total # of HLB_Publications: ${d.HLB_Publications}`)
+            $("#infoField").html(`
+<span style="font-weight: bold"> Name of Collection: </span> ${d.Collection} </br> 
+<span style="font-weight: bold">Total # of HLB_Publications: </span> ${d.HLB_Publications}
+`);
 
             // color to class
             ColorToClass(d.Collection);
         })
         .on("mouseout", function(d) { RemoveColorFromClass(d.Collection) })
-        .on("click", function(d){ lockColor(d.Collection); })
+        .on("click", function(d){ lockColor(d.Collection); console.log('calling fancy', d); fancy(LookUpCurrentCollection())})
 });

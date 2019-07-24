@@ -15,7 +15,9 @@ body {
     cursor: pointer;
 }
 
-
+#bubbleChartDiv {
+    /*background-color: #0d47a1;*/
+}
 /* LINE CHART*/
 /*.line {
     stroke: #0571b0;
@@ -58,3 +60,19 @@ body {
     fill: #f4a582;
     opacity: 1
 }*/
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 20px;
+    height: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 100);
+    border: 0.4px solid #000000;
+}
+
+.carousel-indicators .active {
+    width: 20px;
+    height: 5px;
+    margin: 0;
+    background-color: rgb(73, 73, 73);
+}

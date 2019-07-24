@@ -39,6 +39,8 @@ d3.csv("data/publicationsOverTime.csv").then( function(data) {
         .key(function(d){return d.collection;})
         .entries(data);
 
+    console.log(sumstat);
+
     // convert year into number TODO: scaleTime
     data.forEach(function (d) {
         d.year = +d.year;

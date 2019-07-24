@@ -90,6 +90,7 @@ function RemoveColorFromClass (className){
             .css("fill", colorForUnselected)
             .css("background", 'transparent');
 
+
         // and transition back
         reduceSelectedCircle(className);
     }
@@ -100,7 +101,7 @@ function lockColor (className){
 
     // console.log('locking color to', className);
 
-    // check if word is locked, if so -> unlock
+    // check if word is locked, if locked -> unlock, UNLESS MAINSWITCH IS TRUE
     if (selectedClasses.includes(className)){
 
         // find position of word in lockedWords and unlock the word & color
@@ -123,9 +124,11 @@ function lockColor (className){
         for (let i = 0; i < selectedClasses.length; ++i) {
             if (selectedClasses[i]===''){
 
-                // assign color to class and lock the word
-                ColorToClass(className);
+                // lock the word
                 selectedClasses[i] = className;
+
+                // and assign color to class
+                ColorToClass(className);
                 break;
             }
         }

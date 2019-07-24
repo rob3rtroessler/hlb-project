@@ -2,10 +2,11 @@ const express = require("express");
 const path = require('path');
 //const mysql = require('mysql');
 
+
+
 // Initialize Express
 const app = express();
 app.use(express.static('static'));
-
 
 app.get('/',function(req,res){
   res.sendFile(__dirname + '/index.html');
