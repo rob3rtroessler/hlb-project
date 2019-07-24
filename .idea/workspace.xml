@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebeb9706-4d4e-4c7b-aa04-f8edbe998c06" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/data.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/fancy.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/fancyLines.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/fancyLinesNew.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/libs/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" afterPath="$PROJECT_DIR$/static/css/styles.css" />
       <change beforePath="$PROJECT_DIR$/static/data/collection_scatter.csv" afterPath="$PROJECT_DIR$/static/data/collection_scatter.csv" />
-      <change beforePath="$PROJECT_DIR$/static/data/publicationsOverTime.csv" afterPath="$PROJECT_DIR$/static/data/publicationsOverTime.csv" />
-      <change beforePath="$PROJECT_DIR$/static/js/bars.js" afterPath="$PROJECT_DIR$/static/js/bars.js" />
-      <change beforePath="$PROJECT_DIR$/static/js/bubble.js" afterPath="$PROJECT_DIR$/static/js/bubble.js" />
-      <change beforePath="$PROJECT_DIR$/static/js/colormanager.js" afterPath="$PROJECT_DIR$/static/js/colormanager.js" />
-      <change beforePath="$PROJECT_DIR$/static/js/lines.js" afterPath="$PROJECT_DIR$/static/js/lines.js" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static/js/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -101,6 +86,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="lines.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/lines.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="bars.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/bars.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -124,21 +119,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
+      <file leaf-file-name="fancy.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/fancy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            <state relative-caret-position="614">
+              <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fancy.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/js/fancy.js">
+      <file leaf-file-name="collection_scatter.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/data/collection_scatter.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+            <state relative-caret-position="273">
+              <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -149,16 +144,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
               <caret line="24" column="65" lean-forward="true" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="publicationsOverTime.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/data/publicationsOverTime.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="48" column="25" lean-forward="false" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -214,12 +199,10 @@
         <option value="$PROJECT_DIR$/static/css/typeahead.css" />
         <option value="$PROJECT_DIR$/publicationsOverTime.csv" />
         <option value="$PROJECT_DIR$/static/data/collections.csv" />
-        <option value="$PROJECT_DIR$/static/data/collection_scatter.csv" />
         <option value="$PROJECT_DIR$/static/js/collectionData.js" />
         <option value="$PROJECT_DIR$/static/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/static/css/styles.css" />
         <option value="$PROJECT_DIR$/static/js/fancyLines.js" />
-        <option value="$PROJECT_DIR$/static/js/lines.js" />
         <option value="$PROJECT_DIR$/static/data/publicationsOverTime.csv" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -230,6 +213,8 @@
         <option value="$PROJECT_DIR$/static/js/data.js" />
         <option value="$PROJECT_DIR$/static/js/fancyLinesNew.js" />
         <option value="$PROJECT_DIR$/static/js/fancy.js" />
+        <option value="$PROJECT_DIR$/static/data/collection_scatter.csv" />
+        <option value="$PROJECT_DIR$/static/js/lines.js" />
       </list>
     </option>
   </component>
@@ -251,10 +236,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="134" />
-    <option name="y" value="-1146" />
-    <option name="width" value="1934" />
-    <option name="height" value="1037" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="2418" />
+    <option name="height" value="1368" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -284,6 +269,12 @@
               <item name="04_HarvardLibraryBulletin" type="b2602c69:ProjectViewProjectNode" />
               <item name="04_HarvardLibraryBulletin" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="04_HarvardLibraryBulletin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_HarvardLibraryBulletin" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="04_HarvardLibraryBulletin" type="b2602c69:ProjectViewProjectNode" />
@@ -352,18 +343,18 @@
       <workItem from="1558620439952" duration="1522000" />
       <workItem from="1559192709560" duration="26450000" />
       <workItem from="1559515512202" duration="1615000" />
-      <workItem from="1563223464403" duration="61741000" />
+      <workItem from="1563223464403" duration="62480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91328000" />
+    <option name="totallyTimeSpent" value="92067000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-1359" width="2418" height="1368" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19907212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -675,14 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/data/collection_scatter.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../Harvard University (Teaching, Courses, Affiliations, Bureaucracy)/Secondary Field - Computer Science/CS271/Project/PatternsOfDiscourse/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -719,14 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="148" column="4" lean-forward="false" selection-start-line="148" selection-start-column="4" selection-end-line="148" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/lines.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="41" column="25" lean-forward="false" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -838,6 +813,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="614">
           <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/data/collection_scatter.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/lines.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
           <folding />
         </state>
       </provider>
